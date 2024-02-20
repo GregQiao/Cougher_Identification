@@ -4,8 +4,6 @@ For people, different kinds of the cough must appear in train,
 validation, and test sets. In this case, these sets are thus derived from
 splitting the original training set intothree chunks.
 
-Authors:
- * K Q, 2022
 """
 
 import os
