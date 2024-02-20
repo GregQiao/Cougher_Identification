@@ -1,5 +1,6 @@
 # Cougher_Identification
  Coughing person identification Pytorch. 
+ 
 This codes is for the paper "Cougher-TDNN: Modified ECAPA-TDNN for Coughing Person Identification".
 The folder "aug_data" contains the dic of labels for the experiment
 The folder "Ecapa" contains the codes experimental results and best model of Ecapa-TDNN model.
