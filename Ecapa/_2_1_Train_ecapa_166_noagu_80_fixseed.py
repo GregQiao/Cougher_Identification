@@ -33,7 +33,7 @@ lllr ='lra_fixsed'
 n_mels =23  # F-bank dim
 lin_neur = 192 #ecapa output neur number
 '''
-1. 导入Ecapa-tdnn模型
+1. import Ecapa-tdnn
 '''
 from _0_3_ECAPA_TDNN_model import ECAPA_TDNN  #,Classifier
 '''
