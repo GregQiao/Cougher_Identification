@@ -25,7 +25,7 @@ import math
 logger = logging.getLogger(__name__)
 SAMPLERATE = 16000
 
-picknum= 166 #选择数据集
+picknum= 166 
 typ = 'noagu'
 
 def prepare_cough(
@@ -85,16 +85,16 @@ def prepare_cough(
     #lst42n = glob(data_folder + "/42_nos/*.wav")
  
     #lst80p.extend(lst80n)
-    random.shuffle(lst)  #打乱顺序  、
-    #lst = lst80p[:46984]    # 按1:1 在80人数据中随机挑出23492
+    random.shuffle(lst)  
+    #lst = lst80p[:46984]  
     #lst = lst80p[:len(lst42p)]
     #lst.extend(lst42n)
     
     random.shuffle(lst)
-    #lists = lst80[:23495]  #挑出与42人数据1：1的数量
-    #lists.extend(lst42) # 合并80+42人数据
+    #lists = lst80[:23495] 
+    #lists.extend(lst42) 
     
-    #random.shuffle(lstp) #用于将一个列表中的元素打乱
+    #random.shuffle(lstp)
     #f=open("random_20221010.txt","w")
     #f.write(str(lst))
     #f.close()
@@ -162,17 +162,17 @@ def check_folders(*folders):
             return False
     return True
 
-# 定义函数  实现两个键的字典
+
 def update_dict(key1, key2, new_value):  
-    # 创建元组  
+
     key_tuple = (key1, key2)  
       
-    # 在字典中查找值  
+ 
     if key_tuple in my_dict:  
-        # 更新值  
+
         my_dict[key_tuple] = new_value  
     else:  
-        # 添加新的键值对  
+
         my_dict[key_tuple] = new_value  
       
     return my_dict  
@@ -204,15 +204,15 @@ def split_sets(wav_list, split_ratio):
     #print(len(wav_list))
       
     for wav_file in wav_list:
-        # Pick up classes 挑出咳嗽人标签
+
         cougher = wav_file.split ( "\\" )[-1].split ( "_" )[0]
         data_dic[cougher] = []
         #print(cougher)
-    # 将字典的键值对转换为元组列表
+
     #items = list(data_dic.items())
-    # 按键排序  
+
     #items.sort() 
-    # 打印第一个键值对  
+
     #print(items[0])
     #print(items[0][0])
     
@@ -221,7 +221,7 @@ def split_sets(wav_list, split_ratio):
         #print(type(key))
         pth = []
         for wav_file in wav_list:
-            # Pick up classes 挑出咳嗽人标签
+
             #print(pth)
             cougher = wav_file.split ( "\\" )[-1].split ( "_" )[0]
             
@@ -234,19 +234,16 @@ def split_sets(wav_list, split_ratio):
     #print(items[0][0],data_dic[items[0][0]])  #''.join(items[0])
     #print(data_dic)
     #print(len(data_dic))
-    # 将数据转换为DataFrame，以便进行划分  
+  
     #df = pd.DataFrame(data_dic).T 
-    # 将种类标签添加到DataFrame中  
+
     #df['label'] = df.index  
-    # 确定划分的比例  
-    #train_ratio = split_ratio[0]/100  # 60%为训练集  
-    #valid_ratio = split_ratio[1]/100  # 20%为验证集  
-    #test_ratio = split_ratio[2]/100   # 20%为测试集  
+ 
     
     tot_split = sum(split_ratio)
     splits = ["train", "valid"]
     data_s = {}
-    #按照咳嗽人划分数据集 划分数据集，进行分层抽样  
+
     for key in keys:  
         tot_snts = len(data_dic[key])
         print(key,'this ppl nums:',tot_snts)
@@ -274,7 +271,6 @@ def split_sets(wav_list, split_ratio):
             data_s[("test",key)] = data_dic[key]
             print('test','nums:',len(data_s[('test',key)]))
     
-    #整理出总的试验集，验证集，测试集
     data_split = {'train': [], 'valid': [], 'test': []}
     for i, split in enumerate(["train", "valid", "test"]):
         for key in keys:  
