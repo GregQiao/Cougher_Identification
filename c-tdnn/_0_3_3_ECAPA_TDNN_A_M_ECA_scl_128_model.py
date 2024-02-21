@@ -1,7 +1,4 @@
 """A popular speaker recognition and diarization model.
-
-Authors
- * Hwidong Na 2020
 """
 
 # import os
@@ -286,7 +283,7 @@ class AttentiveStatisticsPooling(nn.Module):
             self.tdnn = TDNNBlock(channels * 3, attention_channels, 1, 1)
         else:
             self.tdnn = TDNNBlock(channels, attention_channels, 1, 1)
-        self.tanh = nn.Tanh() #nn.Tanh() 创建了一个双曲正切激活层使用 nn.Tanh() 可以帮助防止模型在训练过程中出现梯度消失或爆炸的问题，同时也可以增加模型的非线性
+        self.tanh = nn.Tanh() 
         self.conv = Conv1d(
             in_channels=attention_channels, out_channels=channels, kernel_size=1
         )
@@ -305,7 +302,7 @@ class AttentiveStatisticsPooling(nn.Module):
             mean = (m * x).sum(dim)
             std = torch.sqrt(
                 (m * (x - mean.unsqueeze(dim)).pow(2)).sum(dim).clamp(eps)
-            ) #这个代码片段中的 clamp 函数在这里用于确保数值稳定性。clamp 函数的作用是对一个张量中的值进行限制，如果张量中的值小于给定的 eps，那么这个值就会被设置为 eps。
+            ) 
             return mean, std
 
         if lengths is None:
