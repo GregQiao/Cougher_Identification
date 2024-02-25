@@ -20,13 +20,16 @@ The folder "Ecapa" contains the codes experimental results and best model for th
 1 The codes for creating label for experiment:
 _0_2_3_2_data_prepare_Cougher_pick166_noagu.py,_0_2_3_3_data_prepare_Cougher_pick166_noagu_80.py and _0_2_3_2_data_prepare_Cougher_pick166_noagu_86.py 
 
-2 Codes to built model 
+2 Codes to built model:
+
 _0_3_ECAPA_TDNN_model.py; _0_3_3_ECAPA_TDNN_A_M_ECA_scl_128_model.py
 
-3 loading dataset 
+3 loading dataset: 
+
 The Python file name includes "Load_dataset_Json."
 
-4 Training
+4 Training:
+
 The Python file name includes "Train"
 
 # Version of  AI tools
