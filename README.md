@@ -1,7 +1,7 @@
 # Cougher_Identification
  Coughing person identification Pytorch. 
  
-This codes is for the paper "Cougher-TDNN: Modified ECAPA-TDNN for Coughing Person Identification".
+This project is for the paper "Cougher-TDNN: Modified ECAPA-TDNN for Coughing Person Identification".
 
 # Folders
 The folder "aug_data" contains the dictionary of labels for the experiment, because the cougher dataset is not open source. So that's why there aren't wav files.
