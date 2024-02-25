@@ -8,14 +8,23 @@ The folder "aug_data" contains the dictionary of labels for the experiment, beca
 
 The folder "Ecapa" contains the codes experimental results and best model for the Ecapa-TDNN model. 
 
-The folder "x-vector" contains the codes experimental results and best model for the x-vector model.
+ "x-vector" contains the codes experimental results and best model for the x-vector model.
 
-The folder "Resnet" contains the codes experimental results and best model for the Resnet50 model.
+"Resnet" contains the codes experimental results and best model for the Resnet50 model.
 
-The folder "c-tdnn" contains the experimental results and best model for the Cougher-TDNN model.
+ "c-tdnn" contains the experimental results and best model for the Cougher-TDNN model.
+
+"results" contains the training log and the best model found during the training process.
 
 # Codes:
-_0_2_3_2_data_prepare_Cougher_pick166_noagu.py,_0_2_3_3_data_prepare_Cougher_pick166_noagu_80.py and _0_2_3_2_data_prepare_Cougher_pick166_noagu_86.py are the codes for creating label for experiment.
+1 The codes for creating label for experiment:
+_0_2_3_2_data_prepare_Cougher_pick166_noagu.py,_0_2_3_3_data_prepare_Cougher_pick166_noagu_80.py and _0_2_3_2_data_prepare_Cougher_pick166_noagu_86.py 
+2 Codes to built model 
+_0_3_ECAPA_TDNN_model.py; _0_3_3_ECAPA_TDNN_A_M_ECA_scl_128_model.py
+3 loading dataset 
+The Python file name includes "Load_dataset_Json."
+4 Training
+The Python file name includes "Train"
 
 # Version of  AI tools
 numpy                     1.20.1      
