@@ -21,6 +21,8 @@ _0_2_3_2_data_prepare_Cougher_pick166_noagu.py,_0_2_3_3_data_prepare_Cougher_pic
 numpy                     1.20.1      
 python                    3.8.8       
 torch                     2.0.1+cu118 
+
 torchaudio                2.0.2+cu118 
+
 torchvision               0.15.2+cu118
 
