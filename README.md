@@ -41,3 +41,4 @@ torchaudio                2.0.2+cu118
 
 torchvision               0.15.2+cu118
 
+speechbrain               0.5.13
