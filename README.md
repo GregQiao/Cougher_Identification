@@ -4,7 +4,7 @@
 This project is for the paper "Cougher-TDNN: Modified ECAPA-TDNN for Coughing Person Identification".
 
 # Folders
-The folder "aug_data" contains the dictionary of labels for the experiment, and the folder "pick_166" for wav files.
+The folder "aug_data" contains the dictionary of labels for model trainning, and cougher dataset is in the folder "pick_166".
 
 The folder "Ecapa" contains the codes experimental results and best model for the Ecapa-TDNN model. 
 
